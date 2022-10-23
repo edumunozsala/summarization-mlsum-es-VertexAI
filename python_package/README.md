@@ -15,11 +15,11 @@ The directory provides code to fine tune a transformer model ([mT5](https://hugg
 * `setup.py`: `setup.py` scripts specifies Python dependencies required for the training job. Vertex Training uses pip to install the package on the training instances allocated for the job.
 
 ### Trainer Modules
-| File Name | Purpose |
-| :-------- | :------ |
-| [utils.py](trainer/utils.py) | Includes: utility functions such as data input functions to read data, save model to GCS bucket. |
-| [experiment.py](trainer/experiment.py) | Runs the model training and evaluation experiment, and exports the final model. |
-| [task.py](trainer/task.py) | Includes: 1) Initialize and parse task arguments (hyper parameters), and 2) Entry point to the trainer. |
+| File Name | Purpose                                                                                                                                                 |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [utils.py](trainer/utils.py) | Includes: utility functions such as save model to GCS bucket.                                                                                           |
+| [experiment.py](trainer/experiment.py) | Runs the model training and evaluation experiment, and exports the final model. Also include an integration with Weight&Biases to track the experiment. |
+| [task.py](trainer/task.py) | Includes: 1) Initialize and parse task arguments (hyper parameters), and 2) Entry point to the trainer.                                                 |
 
 ### Versions
 This script uses the pre-built PyTorch containers for PyTorch 1.7.
